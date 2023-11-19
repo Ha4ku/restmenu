@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Меню ресторана Vkusno.net</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+            padding-top: 30px;
+		}
+        header h1{
+            padding-bottom: 13px;
+        }
+        nav{
+            margin-top: 10px;
+        }
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		nav li {
+			display: inline-block;
+			margin-right: 20px;
+		}
+		nav a {
+			color: #D3D3D3;
+			text-decoration: none;
+		}
+		h1 {
+			margin: 0;
+		}
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			margin-top: 100px;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			padding: 15px 25px;
+			border-radius: 7px;
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+		h2 {
+			margin-top: 0;
+		}
+		.menu-item {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 10px;
+		}
+		.menu-item-name {
+			font-weight: bold;
+		}
+		.menu-item-price {
+			font-style: italic;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-image: url("https://kartinki.pics/uploads/posts/2021-04/1617307306_6-p-fon-dlya-menyu-restorana-8.jpg");
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Vkusno.net</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Меню</a></li>
+				<li><a href="#">Бронирование</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<h2 id="salaty">Салаты</h2>
+		<div class="menu-item">
+			<div class="menu-item-name">Оливье</div>
+			<div class="menu-item-price">600 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Салат Цезарь</div>
+			<div class="menu-item-price">800 тг</div>
+		</div>
+		<h2 id="osnovnye-blyuda">Основные блюда</h2>
+		<div class="menu-item">
+			<div class="menu-item-name">Рис с курицей в сливочном соусе</div>
+			<div class="menu-item-price">1500 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Узбекский плов</div>
+			<div class="menu-item-price">1700 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Бешпармак</div>
+			<div class="menu-item-price">2000 тг</div>
+		</div>
+        <h2 id="napitki">Напитки</h2>
+		<div class="menu-item">
+			<div class="menu-item-name">Кумыс</div>
+			<div class="menu-item-price">800 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Лимонад</div>
+			<div class="menu-item-price">1000 тг</div>
+		</div>
+	</div>
+	<script>
+		var links = document.querySelectorAll('nav a[href^="#"]');
+
+		links.forEach(function(link) {
+			link.addEventListener('click', function(event) {
+				event.preventDefault(); 
+				var targetId = this.getAttribute('href'); 
+				var targetElement = document.querySelector(targetId);
+				var targetOffset = targetElement.offsetTop; 
+				window.scrollTo({
+					top: targetOffset,
+					behavior: 'smooth'
+				});
+			});
+		});
+	</script>
+</body>
+</html>
