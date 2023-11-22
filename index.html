@@ -71,69 +71,176 @@
 			background-position: center;
 			color: #fff;
 		}
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+			position: fixed;
+			width: 80%;
+			height: 500px;
+        }
+  .search-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-container input[type=text] {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .search-container button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
 	</style>
 </head>
 <body>
 	<header>
 		<h1>Vkusno.net</h1>
 		<nav>
-            		<ul>
-              			<li><a href="https://ha4ku.github.io/restmain/">Главная</a></li>
-              			<li><a href="https://ha4ku.github.io/restmenu/">Меню</a></li>
-              			<li><a href="https://ha4ku.github.io/restbron/">Бронирование</a></li>
-              			<li><a href="https://ha4ku.github.io/resthist/">О нас</a></li>
-              			<li><a href="https://ha4ku.github.io/restcont/">Контакты</a></li>
-            		</ul>
+			<ul>
+			  <li><a href="https://ha4ku.github.io/restmain/">Главная</a></li>
+              <li><a href="https://ha4ku.github.io/restmenu/">Меню</a></li>
+              <li><a href="https://ha4ku.github.io/restbron/">Бронирование</a></li>
+              <li><a href="https://ha4ku.github.io/resthist/">О нас</a></li>
+              <li><a href="https://ha4ku.github.io/restcont/">Контакты</a></li>
+              <li><a href="https://ha4ku.github.io/restfeed/">Отзыв</a></li>
+			</ul>
 		</nav>
 	</header>
+  <div class="search-container">
+    <input type="text" id="search-bar" placeholder="Поиск блюд...">
+    <button type="button" onclick="searchMenu()">Найти</button>
+  </div>
 	<div class="container">
-		<h2 id="salaty">Салаты</h2>
+		<h2 id="menu-item">Салаты</h2>
 		<div class="menu-item">
 			<div class="menu-item-name">Оливье</div>
-			<div class="menu-item-price">800 тг</div>
+			<div class="menu-item-price">600 тг</div>
 		</div>
 		<div class="menu-item">
 			<div class="menu-item-name">Салат Цезарь</div>
 			<div class="menu-item-price">800 тг</div>
 		</div>
-		<h2 id="osnovnye-blyuda">Основные блюда</h2>
+		<div class="menu-item">
+			<div class="menu-item-name">Греческий салат</div>
+			<div class="menu-item-price">900 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Салат "Витаминный"</div>
+			<div class="menu-item-price">750 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Салат "Цветная капуста"</div>
+			<div class="menu-item-price">850 тг</div>
+		</div>
+	
+		<div style="margin-top: 50px;"></div>
+
+		<h2 id="omenu-item">Основные блюда</h2>
 		<div class="menu-item">
 			<div class="menu-item-name">Рис с курицей в сливочном соусе</div>
-			<div class="menu-item-price">2500 тг</div>
+			<div class="menu-item-price">1500 тг</div>
 		</div>
 		<div class="menu-item">
 			<div class="menu-item-name">Узбекский плов</div>
-			<div class="menu-item-price">2000 тг</div>
+			<div class="menu-item-price">1700 тг</div>
 		</div>
 		<div class="menu-item">
 			<div class="menu-item-name">Бешпармак</div>
-			<div class="menu-item-price">4000 тг</div>
-		</div>
-        <h2 id="napitki">Напитки</h2>
-		<div class="menu-item">
-			<div class="menu-item-name">Кумыс 1л</div>
 			<div class="menu-item-price">2000 тг</div>
 		</div>
 		<div class="menu-item">
-			<div class="menu-item-name">Лимонад 1л</div>
+			<div class="menu-item-name">Стейк из лосося</div>
+			<div class="menu-item-price">2500 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Паста с грибами</div>
+			<div class="menu-item-price">1200 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Куриные крылья BBQ</div>
 			<div class="menu-item-price">1300 тг</div>
 		</div>
-	</div>
-	<script>
-		var links = document.querySelectorAll('nav a[href^="#"]');
+		<div class="menu-item">
+			<div class="menu-item-name">Говяжий стейк</div>
+			<div class="menu-item-price">1800 тг</div>
+		</div>
+	
+		<div style="margin-top: 50px;"></div>
 
+		<h2 id="menu-item">Напитки</h2>
+		<div class="menu-item">
+			<div class="menu-item-name">Кумыс 1л</div>
+			<div class="menu-item-price">800 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Лимонад 1л</div>
+			<div class="menu-item-price">1000 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Морс 1л</div>
+			<div class="menu-item-price">900 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Чай зеленый 1л</div>
+			<div class="menu-item-price">700 тг</div>
+		</div>
+		<div class="menu-item">
+			<div class="menu-item-name">Кофе 1л</div>
+			<div class="menu-item-price">1200 тг</div>
+		</div>
+	</div>
+	
+	<footer>
+        <p>Vkusno.net &copy; 2021</p>
+      </footer>
+	  <script>
+		var links = document.querySelectorAll('nav a[href^="#"]');
+	
 		links.forEach(function(link) {
 			link.addEventListener('click', function(event) {
-				event.preventDefault(); 
-				var targetId = this.getAttribute('href'); 
+				event.preventDefault();
+				var targetId = this.getAttribute('href');
 				var targetElement = document.querySelector(targetId);
-				var targetOffset = targetElement.offsetTop; 
+				var targetOffset = targetElement.offsetTop;
 				window.scrollTo({
 					top: targetOffset,
 					behavior: 'smooth'
 				});
 			});
 		});
+	
+		function searchMenu() {
+			var input, filter, menu, allMenuItems, i, itemName, txtValue;
+			input = document.getElementById("search-bar");
+			filter = input.value.toUpperCase();
+			menu = document.getElementsByClassName("container")[0];
+			allMenuItems = menu.querySelectorAll(".menu-item");
+	
+			for (i = 0; i < allMenuItems.length; i++) {
+				itemName = allMenuItems[i].getElementsByClassName("menu-item-name")[0];
+				txtValue = itemName.textContent || itemName.innerText;
+	
+				if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					allMenuItems[i].style.display = "";
+				} else {
+					allMenuItems[i].style.display = "none";
+				}
+			}
+		}
 	</script>
+	
 </body>
 </html>
